@@ -63,7 +63,7 @@ class ClassCreator {
 		$property.="\tconst DB_TABLE = '".$tableName."';\n\tconst DB_TABLE_PK = '".$key."';\n\n";
         $property .="\t//Properties\n";
         foreach($tableresult as $row){
-            $property.= "\tprivate $".lcfirst($row['Field']).";\n";
+            $property.= "\tpublic $".lcfirst($row['Field']).";\n";
         }
         return $property."";
     }
